@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Escape City Palace</title>
+  <style>
+    body {
+      background-color: black;
+      color: #ffcc00;
+      font-family: 'Georgia', serif;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .choices {
+      margin-top: 2rem;
+    }
+    button {
+      background-color: #222;
+      color: #ffcc00;
+      border: 1px solid #ffcc00;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      width: 100%;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Escape City Palace</h1>
+  <div id="story"></div>
+  <div class="choices" id="choices"></div>
+
+  <script>
+    let steps = [];
+    let currentStep = 1;
+
+    fetch("story.json")
+      .then(response => response.json())
+      .then(data => {
+        steps = data.steps;
+        showStep(currentStep);
+      })
+      .catch(error => {
+        document.getElementById("story").innerText = "Failed to load story.";
+        console.error(error);
+      });
+
+    function showStep(stepId) {
+      const step = steps.find(s => s.id === stepId);
+      if (!step) return;
+
+      currentStep = stepId;
+      document.getElementById("story").innerText = step.text;
+
+      const choicesDiv = document.getElementById("choices");
+      choicesDiv.innerHTML = "";
+
+      const shuffledChoices = [...step.choices].sort(() => Math.random() - 0.5);
+
+      shuffledChoices.forEach(choice => {
+        const button = document.createElement("button");
+        button.innerText = choice.text;
+        button.onclick = () => {
+          if (choice.next_step) {
+            showStep(choice.next_step);
+          } else {
+            document.getElementById("story").innerText = choice.death || "You have died.";
+            choicesDiv.innerHTML = '<button onclick="location.reload()">Restart</button>';
+          }
+        };
+        choicesDiv.appendChild(button);
+      });
+    }
+  </script>
+</body>
+</html>

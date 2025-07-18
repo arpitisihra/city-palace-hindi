@@ -1,0 +1,142 @@
+{
+    "steps": [
+      {"id": 1, "text": "You enter a forgotten library in the old city. A strange force pulls you toward a shelf. A black-cloth-wrapped book lies pulsing softly in the corner.", "choices": [{"text": "Proceed", "next_step": 2}]},
+      {"id": 2, "text": "You unwrap the book. It’s titled 'The Cursed City Palace of Jaipur'. The pages are blank. You try to close it, but it flips open on its own.", "choices": [{"text": "Proceed", "next_step": 3}]},
+      {"id": 3, "text": "The page reads: 'You wanted the cursed City Palace. I’ll take you there.' Your body rises. Wind howls. A vortex forms — you’re sucked in.", "choices": [{"text": "Proceed", "next_step": 4}]},
+  
+      {"id": 4, "text": "You land at Mubarak Mahal under a moonlit sky. The palace is silent. You feel eyes watching.", "choices": [
+        {"text": "Investigate the building", "next_step": 5},
+        {"text": "Walk into the shadows behind you", "death": "Death — dragged into the darkness by spirits of old pehredaars."}
+      ]},
+  
+      {"id": 5, "text": "You walk toward the Crafts Demonstration Area. Tools clang… but no one’s there. You hear whispers in Marwari.", "choices": [
+        {"text": "Whisper back to the voices", "death": "Death — you mispronounce something in Marwari and are struck by a flying mace."},
+        {"text": "Step back slowly and cross to Sileh Khana", "next_step": 6}
+      ]},
+  
+      {"id": 6, "text": "You reach Sileh Khana. Weapons float and clash mid-air. Ghostly officers duel. One turns and stares at you.", "choices": [
+        {"text": "Run toward Diwan-i-Aam", "next_step": 7},
+        {"text": "Try to speak to the officer", "death": "Death — executed by flying swords."}
+      ]},
+  
+      {"id": 7, "text": "You enter Diwan-i-Aam. The throne is empty, but footsteps surround you.", "choices": [
+        {"text": "Kneel and pretend to be a servant", "death": "Death — trampled by ghost nobles."},
+        {"text": "Crawl behind the pillar and hide", "next_step": 8}
+      ]},
+  
+      {"id": 8, "text": "The ghost of an English officer laughs from the throne. 'The Maharaja never left,' he snarls.", "choices": [
+        {"text": "Run through the open corridor", "next_step": 9},
+        {"text": "Confront him", "death": "Death — hung from ceiling by invisible rope."}
+      ]},
+  
+      {"id": 9, "text": "You’re near Rajendra Pol. The gates bleed. Two Silver Urns glimmer beside.", "choices": [
+        {"text": "Hide inside the urn", "next_step": 10},
+        {"text": "Run toward the open gallery", "death": "Death — cursed arrow to the heart."}
+      ]},
+  
+      {"id": 10, "text": "Inside the urn, you find a lighter. You flick it on. An inscription reads: 'Above the moon, beyond the fire — the mantra lies on Chandra’s spire.' 'Speak it to awaken the sleeping gods.'", "choices": [
+        {"text": "Burn the inscription", "death": "Death — urn melts and seals you alive."},
+        {"text": "Commit the mantra clue to memory", "next_step": 11}
+      ]},
+  
+      {"id": 11, "text": "The palace shakes slightly. A chant echoes from afar.", "choices": [
+        {"text": "Whisper the chant softly", "next_step": 12},
+        {"text": "Try to mimic it loudly", "death": "Death — shadow arms yank you from above."}
+      ]},
+  
+      {"id": 12, "text": "You step out and find a cracked idol of Ganesh near the gate.", "choices": [
+        {"text": "Touch the idol gently", "next_step": 13},
+        {"text": "Try to pry off the gem in its forehead", "death": "Death — cursed flames erupt."}
+      ]},
+  
+      {"id": 13, "text": "You reach Ridhi Sidhi Pol. The arch pulses with strange red light.", "choices": [
+        {"text": "Walk through backwards", "next_step": 14},
+        {"text": "Sprint through forward", "death": "Death — skull cracked open by a child’s spirit."}
+      ]},
+  
+      {"id": 14, "text": "You reach Pritam Chowk — four season-painted doors. All slam shut, then one creaks open.", "choices": [
+        {"text": "Choose the blue winter door", "next_step": 15},
+        {"text": "Choose the red summer door", "death": "Death — fall into fire pit."}
+      ]},
+  
+      {"id": 15, "text": "Inside is a mirror room. Your reflection doesn’t match you.", "choices": [
+        {"text": "Shatter the mirror", "next_step": 16},
+        {"text": "Touch your reflection", "death": "Death — pulled into mirror world."}
+      ]},
+  
+      {"id": 16, "text": "You fall through a hidden chute into a chamber of whispers.", "choices": [
+        {"text": "Chant 'Om Namah Shivaya' to calm them", "next_step": 17},
+        {"text": "Scream for help", "death": "Death — swarm of ghost dogs devour you."}
+      ]},
+  
+      {"id": 17, "text": "The whispers vanish. A dead Marwari worker appears, holding out a key.", "choices": [
+        {"text": "Accept it respectfully", "next_step": 18},
+        {"text": "Grab it aggressively", "death": "Death — your hand rots instantly."}
+      ]},
+  
+      {"id": 18, "text": "You use the key on a locked room. Inside: a floating conch.", "choices": [
+        {"text": "Blow the conch", "next_step": 19},
+        {"text": "Smash it", "death": "Death — ears explode from silent scream."}
+      ]},
+  
+      {"id": 19, "text": "A stairway appears leading up, carved into the wall.", "choices": [
+        {"text": "Light your way with the lighter", "next_step": 20},
+        {"text": "Walk in darkness", "death": "Death — fall into a deep stone chamber."}
+      ]},
+  
+      {"id": 20, "text": "The walls are painted with war scenes. The eyes of painted soldiers move.", "choices": [
+        {"text": "Bow and walk humbly", "next_step": 21},
+        {"text": "Stare directly at the murals", "death": "Death — paintings animate and needles impale your eyes."}
+      ]},
+  
+      {"id": 21, "text": "You reach a small shrine with a half-burned diya.", "choices": [
+        {"text": "Light the diya", "next_step": 22},
+        {"text": "Blow out the diya", "death": "Death — darkness consumes you."}
+      ]},
+  
+      {"id": 22, "text": "You ascend Chandra Mahal. The halls twist unnaturally.", "choices": [
+        {"text": "Mark your path with blood", "next_step": 23},
+        {"text": "Leave no markings", "death": "Death — lost in endless loop."}
+      ]},
+  
+      {"id": 23, "text": "A royal woman glides past, humming a lullaby. She’s headless.", "choices": [
+        {"text": "Bow silently", "next_step": 24},
+        {"text": "Ask her name", "death": "Death — she screams your soul away."}
+      ]},
+  
+      {"id": 24, "text": "A wall ahead is covered in Sanskrit — part of the mantra.", "choices": [
+        {"text": "Copy it onto your hand", "next_step": 25},
+        {"text": "Rip the fabric below it", "death": "Death — cursed ink blinds you."}
+      ]},
+  
+      {"id": 25, "text": "The wind picks up violently. A voice says, 'Only the pure heart may pass.'", "choices": [
+        {"text": "Bow down and ask to be forgiven", "next_step": 26},
+        {"text": "Curse the voice back", "death": "Death — crushed by invisible mace."}
+      ]},
+  
+      {"id": 26, "text": "A door blocks the rooftop. It requires a sacrifice.", "choices": [
+        {"text": "Offer a drop of your blood", "next_step": 27},
+        {"text": "Offer the lighter", "death": "Death — rejected and thrown down the stairs."}
+      ]},
+  
+      {"id": 27, "text": "You step onto the rooftop. The full moon shines. The final mantra is inscribed on a stone.", "choices": [
+        {"text": "Chant it aloud slowly", "next_step": 28},
+        {"text": "Chant as fast as possible", "death": "Death — palace collapses onto you."}
+      ]},
+  
+      {"id": 28, "text": "The spirits scream. The ground shakes. Light bursts from the sky.", "choices": [
+        {"text": "Keep chanting the mantra", "next_step": 29},
+        {"text": "Try to run away", "death": "Death — sucked into the clouds of spirits."}
+      ]},
+  
+      {"id": 29, "text": "You rise into the sky. The vortex returns. Faces of the cursed reach for you.", "choices": [
+        {"text": "Fold hands and offer them peace", "next_step": 30},
+        {"text": "Kick them away", "death": "Death — pulled into eternal torment."}
+      ]},
+  
+      {"id": 30, "text": "You wake up in the library. The book is closed beside you. One drop of blood stains the page. You survived.", "choices": [
+        {"text": "Restart / Share Your Ending", "next_step": 1}
+      ]}
+    ]
+  }
+  
