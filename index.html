@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>City Palace Horror - Hindi</title>
+  <title>City Palace Hindi Game</title>
   <style>
     body {
       background-color: black;
@@ -43,16 +43,16 @@
 
   <script>
     let story = [];
-    let currentStep = 1;
+    let currentStepId = 1;
 
     async function loadStory() {
       const res = await fetch('story.json');
       story = await res.json();
-      showStep(currentStep);
+      showStep(currentStepId);
     }
 
-    function showStep(stepNum) {
-      const step = story.find(s => s.step === stepNum);
+    function showStep(id) {
+      const step = story.find(s => s.id === id);
       if (!step) return;
 
       document.getElementById('stepText').innerText = step.text;
@@ -64,32 +64,32 @@
           const btn = document.createElement('button');
           btn.innerText = choice.text;
           btn.onclick = () => {
-            if (choice.outcome === 'death') {
-              document.getElementById('stepText').innerText = choice.text;
+            if (choice.death) {
+              document.getElementById('stepText').innerText = choice.death;
               choicesDiv.innerHTML = '';
               document.getElementById('restartBtn').style.display = 'inline-block';
             } else {
-              currentStep++;
-              showStep(currentStep);
+              currentStepId = choice.next_step;
+              showStep(currentStepId);
             }
           };
           choicesDiv.appendChild(btn);
         });
       } else {
         const btn = document.createElement('button');
-        btn.innerText = "➡ आगे बढ़ें";
+        btn.innerText = " आगे बढ़ें";
         btn.onclick = () => {
-          currentStep++;
-          showStep(currentStep);
+          currentStepId++;
+          showStep(currentStepId);
         };
         choicesDiv.appendChild(btn);
       }
     }
 
     document.getElementById('restartBtn').onclick = () => {
-      currentStep = 4; // restart from step 4 after death
+      currentStepId = 4; // Restart from step 4
       document.getElementById('restartBtn').style.display = 'none';
-      showStep(currentStep);
+      showStep(currentStepId);
     };
 
     loadStory();
