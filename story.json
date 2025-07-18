@@ -1,142 +1,401 @@
-{
-    "steps": [
-      {"id": 1, "text": "You enter a forgotten library in the old city. A strange force pulls you toward a shelf. A black-cloth-wrapped book lies pulsing softly in the corner.", "choices": [{"text": "Proceed", "next_step": 2}]},
-      {"id": 2, "text": "You unwrap the book. It’s titled 'The Cursed City Palace of Jaipur'. The pages are blank. You try to close it, but it flips open on its own.", "choices": [{"text": "Proceed", "next_step": 3}]},
-      {"id": 3, "text": "The page reads: 'You wanted the cursed City Palace. I’ll take you there.' Your body rises. Wind howls. A vortex forms — you’re sucked in.", "choices": [{"text": "Proceed", "next_step": 4}]},
-  
-      {"id": 4, "text": "You land at Mubarak Mahal under a moonlit sky. The palace is silent. You feel eyes watching.", "choices": [
-        {"text": "Investigate the building", "next_step": 5},
-        {"text": "Walk into the shadows behind you", "death": "Death — dragged into the darkness by spirits of old pehredaars."}
-      ]},
-  
-      {"id": 5, "text": "You walk toward the Crafts Demonstration Area. Tools clang… but no one’s there. You hear whispers in Marwari.", "choices": [
-        {"text": "Whisper back to the voices", "death": "Death — you mispronounce something in Marwari and are struck by a flying mace."},
-        {"text": "Step back slowly and cross to Sileh Khana", "next_step": 6}
-      ]},
-  
-      {"id": 6, "text": "You reach Sileh Khana. Weapons float and clash mid-air. Ghostly officers duel. One turns and stares at you.", "choices": [
-        {"text": "Run toward Diwan-i-Aam", "next_step": 7},
-        {"text": "Try to speak to the officer", "death": "Death — executed by flying swords."}
-      ]},
-  
-      {"id": 7, "text": "You enter Diwan-i-Aam. The throne is empty, but footsteps surround you.", "choices": [
-        {"text": "Kneel and pretend to be a servant", "death": "Death — trampled by ghost nobles."},
-        {"text": "Crawl behind the pillar and hide", "next_step": 8}
-      ]},
-  
-      {"id": 8, "text": "The ghost of an English officer laughs from the throne. 'The Maharaja never left,' he snarls.", "choices": [
-        {"text": "Run through the open corridor", "next_step": 9},
-        {"text": "Confront him", "death": "Death — hung from ceiling by invisible rope."}
-      ]},
-  
-      {"id": 9, "text": "You’re near Rajendra Pol. The gates bleed. Two Silver Urns glimmer beside.", "choices": [
-        {"text": "Hide inside the urn", "next_step": 10},
-        {"text": "Run toward the open gallery", "death": "Death — cursed arrow to the heart."}
-      ]},
-  
-      {"id": 10, "text": "Inside the urn, you find a lighter. You flick it on. An inscription reads: 'Above the moon, beyond the fire — the mantra lies on Chandra’s spire.' 'Speak it to awaken the sleeping gods.'", "choices": [
-        {"text": "Burn the inscription", "death": "Death — urn melts and seals you alive."},
-        {"text": "Commit the mantra clue to memory", "next_step": 11}
-      ]},
-  
-      {"id": 11, "text": "The palace shakes slightly. A chant echoes from afar.", "choices": [
-        {"text": "Whisper the chant softly", "next_step": 12},
-        {"text": "Try to mimic it loudly", "death": "Death — shadow arms yank you from above."}
-      ]},
-  
-      {"id": 12, "text": "You step out and find a cracked idol of Ganesh near the gate.", "choices": [
-        {"text": "Touch the idol gently", "next_step": 13},
-        {"text": "Try to pry off the gem in its forehead", "death": "Death — cursed flames erupt."}
-      ]},
-  
-      {"id": 13, "text": "You reach Ridhi Sidhi Pol. The arch pulses with strange red light.", "choices": [
-        {"text": "Walk through backwards", "next_step": 14},
-        {"text": "Sprint through forward", "death": "Death — skull cracked open by a child’s spirit."}
-      ]},
-  
-      {"id": 14, "text": "You reach Pritam Chowk — four season-painted doors. All slam shut, then one creaks open.", "choices": [
-        {"text": "Choose the blue winter door", "next_step": 15},
-        {"text": "Choose the red summer door", "death": "Death — fall into fire pit."}
-      ]},
-  
-      {"id": 15, "text": "Inside is a mirror room. Your reflection doesn’t match you.", "choices": [
-        {"text": "Shatter the mirror", "next_step": 16},
-        {"text": "Touch your reflection", "death": "Death — pulled into mirror world."}
-      ]},
-  
-      {"id": 16, "text": "You fall through a hidden chute into a chamber of whispers.", "choices": [
-        {"text": "Chant 'Om Namah Shivaya' to calm them", "next_step": 17},
-        {"text": "Scream for help", "death": "Death — swarm of ghost dogs devour you."}
-      ]},
-  
-      {"id": 17, "text": "The whispers vanish. A dead Marwari worker appears, holding out a key.", "choices": [
-        {"text": "Accept it respectfully", "next_step": 18},
-        {"text": "Grab it aggressively", "death": "Death — your hand rots instantly."}
-      ]},
-  
-      {"id": 18, "text": "You use the key on a locked room. Inside: a floating conch.", "choices": [
-        {"text": "Blow the conch", "next_step": 19},
-        {"text": "Smash it", "death": "Death — ears explode from silent scream."}
-      ]},
-  
-      {"id": 19, "text": "A stairway appears leading up, carved into the wall.", "choices": [
-        {"text": "Light your way with the lighter", "next_step": 20},
-        {"text": "Walk in darkness", "death": "Death — fall into a deep stone chamber."}
-      ]},
-  
-      {"id": 20, "text": "The walls are painted with war scenes. The eyes of painted soldiers move.", "choices": [
-        {"text": "Bow and walk humbly", "next_step": 21},
-        {"text": "Stare directly at the murals", "death": "Death — paintings animate and needles impale your eyes."}
-      ]},
-  
-      {"id": 21, "text": "You reach a small shrine with a half-burned diya.", "choices": [
-        {"text": "Light the diya", "next_step": 22},
-        {"text": "Blow out the diya", "death": "Death — darkness consumes you."}
-      ]},
-  
-      {"id": 22, "text": "You ascend Chandra Mahal. The halls twist unnaturally.", "choices": [
-        {"text": "Mark your path with blood", "next_step": 23},
-        {"text": "Leave no markings", "death": "Death — lost in endless loop."}
-      ]},
-  
-      {"id": 23, "text": "A royal woman glides past, humming a lullaby. She’s headless.", "choices": [
-        {"text": "Bow silently", "next_step": 24},
-        {"text": "Ask her name", "death": "Death — she screams your soul away."}
-      ]},
-  
-      {"id": 24, "text": "A wall ahead is covered in Sanskrit — part of the mantra.", "choices": [
-        {"text": "Copy it onto your hand", "next_step": 25},
-        {"text": "Rip the fabric below it", "death": "Death — cursed ink blinds you."}
-      ]},
-  
-      {"id": 25, "text": "The wind picks up violently. A voice says, 'Only the pure heart may pass.'", "choices": [
-        {"text": "Bow down and ask to be forgiven", "next_step": 26},
-        {"text": "Curse the voice back", "death": "Death — crushed by invisible mace."}
-      ]},
-  
-      {"id": 26, "text": "A door blocks the rooftop. It requires a sacrifice.", "choices": [
-        {"text": "Offer a drop of your blood", "next_step": 27},
-        {"text": "Offer the lighter", "death": "Death — rejected and thrown down the stairs."}
-      ]},
-  
-      {"id": 27, "text": "You step onto the rooftop. The full moon shines. The final mantra is inscribed on a stone.", "choices": [
-        {"text": "Chant it aloud slowly", "next_step": 28},
-        {"text": "Chant as fast as possible", "death": "Death — palace collapses onto you."}
-      ]},
-  
-      {"id": 28, "text": "The spirits scream. The ground shakes. Light bursts from the sky.", "choices": [
-        {"text": "Keep chanting the mantra", "next_step": 29},
-        {"text": "Try to run away", "death": "Death — sucked into the clouds of spirits."}
-      ]},
-  
-      {"id": 29, "text": "You rise into the sky. The vortex returns. Faces of the cursed reach for you.", "choices": [
-        {"text": "Fold hands and offer them peace", "next_step": 30},
-        {"text": "Kick them away", "death": "Death — pulled into eternal torment."}
-      ]},
-  
-      {"id": 30, "text": "You wake up in the library. The book is closed beside you. One drop of blood stains the page. You survived.", "choices": [
-        {"text": "Restart / Share Your Ending", "next_step": 1}
-      ]}
+[
+  {
+    "step": 1,
+    "text": "आप पुरानी शहर की एक भूली हुई लाइब्रेरी में प्रवेश करते हैं। एक अजीब शिक्त आपको एक शेल्फ की ओर \nखींचती है। एक काले कपड़े में �लपटी �कताब कोने में चमक रही है। \n ➡ [आगे बढ़ें]",
+    "choices": []
+  },
+  {
+    "step": 2,
+    "text": "आप �कताब खोलते हैं। इसका नाम है “जयपुर का शा�पत �सटी पैलेस”। पन्ने खाली हैं। आप इसे बंद करने की \nको�शश करते हैं, ले�कन यह अपने आप खुल जाती है। \n ➡ [आगे बढ़ें]",
+    "choices": []
+  },
+  {
+    "step": 3,
+    "text": "पृष्ठ पर �लखा है: “तुमने शा�पत �सटी पैलेस माँगा था। मैं तुम्हें वहीं ले चलूंगा।” \n आपका शरीर ऊपर उठता है। हवा गरजती है। एक भंवर बनता है — आप उसमें खींचे जाते हैं। \n ➡ [आगे बढ़ें]",
+    "choices": []
+  },
+  {
+    "step": 4,
+    "text": "– 12: खोज और आत्माएँ",
+    "choices": []
+  },
+  {
+    "step": 4,
+    "text": "आप मुबारक महल के  सामने चाँदनी रात में उतरते हैं। महल शांत है। आपको �नगाहें महसूस होती हैं।",
+    "choices": [
+      {
+        "text": "इमारत की तरफ बढ़ें",
+        "outcome": "survive"
+      },
+      {
+        "text": "पीछे की परछाइयों में चलें (मौत — पुराने पहरेदारों की आत्माएँ आपको अंधेरे में घसीट लेती हैं)",
+        "outcome": "death"
+      }
     ]
+  },
+  {
+    "step": 5,
+    "text": "आप हस्त�शल्प क्षेत्र की ओर बढ़ते हैं। औज़ारों की आवाज़ आती है… ले�कन कोई नहीं है। मारवाड़ी में \nफु सफु साहटें सुनाई देती हैं।",
+    "choices": [
+      {
+        "text": "आवाज़ों से बात करें (मौत — गलती से गलत उच्चारण, उड़ती गदा से मारे जाते हैं)",
+        "outcome": "death"
+      },
+      {
+        "text": "धीरे-धीरे पीछे हटें और �सलह खाना की ओर जाएँ",
+        "outcome": "survive"
+      }
+    ]
+  },
+  {
+    "step": 6,
+    "text": "आप �सलह खाना पहुँचते हैं। ह�थयार हवा में तैरते हैं और टकराते हैं। आत्माएँ द्वंद कर रही हैं। एक मेहमान \nअंग्रेज़ अफ़सर आपको घूरता है।",
+    "choices": [
+      {
+        "text": "दीवान-ए-आम की ओर भागें",
+        "outcome": "survive"
+      },
+      {
+        "text": "अफ़सर से बात करने की को�शश करें (मौत — उड़ती तलवारों से)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 7,
+    "text": "आप दीवान-ए-आम में प्रवेश करते हैं। �संहासन खाली है, ले�कन चारों ओर कदमों की आहट है।",
+    "choices": [
+      {
+        "text": "घुटनों के  बल झुककर सेवक बनने का नाटक करें (मौत — दरबा�रयों की आत्माओं द्वारा रौंद �दए गए)",
+        "outcome": "death"
+      },
+      {
+        "text": "स्तंभ के  पीछे रेंगकर छु प जाएँ",
+        "outcome": "survive"
+      }
+    ]
+  },
+  {
+    "step": 8,
+    "text": "एक अंग्रेज़ अफ़सर की आत्मा �संहासन से हँसती है। \n “महाराजा कभी नहीं गए,” वह गुरा�ता है।",
+    "choices": [
+      {
+        "text": "खुले ग�लयारे से भागें",
+        "outcome": "survive"
+      },
+      {
+        "text": "उसका सामना करें (मौत — अदृश्य रस्सी से छत से लटकते हैं)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 9,
+    "text": "आप राजेन्द्र पोल के  पास हैं। सामने दो चाँदी के  बड़े कलश चमक रहे हैं।",
+    "choices": [
+      {
+        "text": "कलश के  अंदर छु पें",
+        "outcome": "survive"
+      },
+      {
+        "text": "खुले ग�लयारे की ओर भागें (मौत — शा�पत तीर �दल में)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 10,
+    "text": "कलश के  अंदर आपको एक लाइटर �मलता है। आप उसे जलाते हैं। \n �शलालेख पर �लखा है: \n “चाँद के  ऊपर, अि�न के  पार — चंद्र महल की छत की छतरी पर मंत्र है।” \n “सोए हुए देवों को जगाने हेतु इसका उच्चारण करो।”",
+    "choices": [
+      {
+        "text": "कलश में �छपे रहें (मौत — सै�नकों की आत्माएं आपको ढूँढ कर आपके  टुकड़े कर देती हैं)",
+        "outcome": "death"
+      },
+      {
+        "text": "तुरंत �नकल कर चंद्र महल की तरफ भागें",
+        "outcome": "survive"
+      }
+    ]
+  },
+  {
+    "step": 11,
+    "text": "महल थोड़ा काँपता है। दूर से एक जप सुनाई देता है।",
+    "choices": [
+      {
+        "text": "चलते रहें",
+        "outcome": "survive"
+      },
+      {
+        "text": "कम्पन बंद होने का इंतज़ार करें (मौत — ऊपर से काली भुजाएँ आपको उठा ले जाती हैं)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 12,
+    "text": "आप बाहर �नकलते हैं और फाटक के  पास एक घोड़े की मू�त� देखते हैं।",
+    "choices": [
+      {
+        "text": "मू�त� के  आगे हाथ जोड़ें",
+        "outcome": "survive"
+      },
+      {
+        "text": "माथे में लगी म�ण को �नकालने की को�शश करें (मौत — घोड़ा जी�वत होकर आपको कु चल देता है)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 13,
+    "text": "– 21: प्रीतम चौक की परीक्षाएँ",
+    "choices": []
+  },
+  {
+    "step": 13,
+    "text": "द्वार खुलता है और आप ऋद्�ध-�सद्�ध पोल पहुँचते हैं। वहाँ एक छोटा बच्चा खेल रहा है | मेहराब से लाल \nप्रकाश �नकल रहा है।",
+    "choices": [
+      {
+        "text": "पीछे की ओर चलकर जाएँ",
+        "outcome": "survive"
+      },
+      {
+        "text": "आगे की ओर दौड़ें (मौत — वो बच्चा एक दैत्य बन कर आपके  दो टुकड़े कर देता है)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 14,
+    "text": "आप प्रीतम चौक पहुँचते हैं — चार ऋतुओं के  दरवाज़े �च�त्रत हैं। \n सभी बंद हो जाते हैं, एक खुलता है।",
+    "choices": [
+      {
+        "text": "नीला (सद�) दरवाज़ा चुनें",
+        "outcome": "survive"
+      },
+      {
+        "text": "लाल (गम�) दरवाज़ा चुनें (मौत — आग के  गड्ढे में �गरते हैं)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 15,
+    "text": "अंदर एक दप�ण कक्ष है। आपकी परछाई आप जैसी नहीं लगती।",
+    "choices": [
+      {
+        "text": "दप�ण तोड़ दें",
+        "outcome": "survive"
+      },
+      {
+        "text": "परछाई को छु एँ (मौत — दप�ण की दु�नया में खींचे जाते हैं)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 16,
+    "text": "आप एक गुप्त सुरंग से फु सफु साहटों के  कक्ष में �गरते हैं।",
+    "choices": [
+      {
+        "text": "थोड़ी देर चुप रहें",
+        "outcome": "survive"
+      },
+      {
+        "text": "मदद के  �लए �चल्लाएँ (मौत — कु त्तों की आत्माओं का झुंड आपको नोच डालता है)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 17,
+    "text": "फु सफु साहटें गायब होती हैं। एक मृत मारवाड़ी कामगार एक चाबी लेकर आता है।",
+    "choices": [
+      {
+        "text": "चाबी लें",
+        "outcome": "survive"
+      },
+      {
+        "text": "उसके  पैर छु एं (मौत — हाथ सड़ जाता है)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 18,
+    "text": "आप चाबी से एक बंद कमरा खोलते हैं। अंदर एक शंख �दखता है।",
+    "choices": [
+      {
+        "text": "शंख बजाएँ",
+        "outcome": "survive"
+      },
+      {
+        "text": "शंख तोड़ें (मौत — चीख से कान फटते हैं)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 19,
+    "text": "दीवार में ऊपर की ओर जाती सी�ढ़याँ प्रकट होती हैं।",
+    "choices": [
+      {
+        "text": "लाइटर से रास्ता रोशन करें",
+        "outcome": "survive"
+      },
+      {
+        "text": "अंधेरे में चलें (मौत — गहरे गड्ढे में �गरते हैं)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 20,
+    "text": "दीवारों पर युद्ध दृश्य �च�त्रत हैं। सै�नकों की आँखें �हलती हैं।",
+    "choices": [
+      {
+        "text": "झुककर �वनम्रता से चलें",
+        "outcome": "survive"
+      },
+      {
+        "text": "�चत्रों में बने सै�नकों से रास्ता पूछें (मौत — �चत्र जी�वत हो जाते हैं, उनकी तलवार आपके  सीने के  पार)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 21,
+    "text": "आप एक छोटे कमरे में पहुँचते हैं जहाँ दो बुझे �दए रखे हैं।",
+    "choices": [
+      {
+        "text": "एक �दया जलाएँ और हाथ जोड़ें",
+        "outcome": "survive"
+      },
+      {
+        "text": "दोनों �दए जलाएं (मौत — एकदम से आग बड़ी हो कर आपको �नगल लेती है)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 22,
+    "text": "– 30: चंद्र महल और पलायन",
+    "choices": []
+  },
+  {
+    "step": 22,
+    "text": "आप चंद्र महल चढ़ते हैं। ग�लयारे अजीब तरह से मुड़ते हैं।",
+    "choices": [
+      {
+        "text": "रास्ते को खून से �चि�नत करें",
+        "outcome": "survive"
+      },
+      {
+        "text": "कोई �नशान न छोड़ें (मौत — अनंत चक्रव्यूह में खो जाते हैं)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 23,
+    "text": "एक स्त्री गुनगुनाती हुई गुजरती है — उसका �सर नहीं है।",
+    "choices": [
+      {
+        "text": "चुपचाप झुकें",
+        "outcome": "survive"
+      },
+      {
+        "text": "उससे रास्ता पूछें (मौत — वह आपकी आत्मा �चल्ला कर खींच लेती है)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 24,
+    "text": "एक दीवार पर लाल कपड़े पर एक संस्कृ त श्लोक �लखा है।",
+    "choices": [
+      {
+        "text": "श्लोक याद कर लें",
+        "outcome": "survive"
+      },
+      {
+        "text": "कपड़े को दीवार से उतारें (मौत — शा�पत स्याही से अंधे हो जाते हैं)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 25,
+    "text": "तेज़ हवा चलती है। एक आवाज़ कहती है, “के वल नेक हृदय का व्यिक्त प्रवेश कर सकता है।”",
+    "choices": [
+      {
+        "text": "झुककर क्षमा माँगें",
+        "outcome": "survive"
+      },
+      {
+        "text": "उसे बताएं आप भले इंसान हैं (मौत — अदृश्य गदा से कु चले जाते हैं)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 26,
+    "text": "आप छत के  दरवाज़े तक पहुंचते हैं मगर दरवाज़ा कु छ मांगता है।",
+    "choices": [
+      {
+        "text": "एक बूंद खून चढ़ाएँ",
+        "outcome": "survive"
+      },
+      {
+        "text": "लाइटर चढ़ाएँ (मौत — अस्वीकार कर सी�ढ़यों से �गरा �दया जाता है)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 27,
+    "text": "आप छत पर आते हैं। पू�ण�मा की रात है। \n पत्थर पर अं�तम मंत्र �लखा है। पास ही एक सोने की ईंट पर कु छ �लखा है",
+    "choices": [
+      {
+        "text": "धीरे-धीरे मंत्र पढ़ें",
+        "outcome": "survive"
+      },
+      {
+        "text": "सोने की ईंट उठा कर उसे पढ़ें (मौत — सोने की ईंट हवा में उड़ कर आपका सर फोड़ देती है)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 28,
+    "text": "आत्माएँ �चल्लाती हैं। ज़मीन काँपती है। आकाश से प्रकाश फू टता है।",
+    "choices": [
+      {
+        "text": "मंत्र पढ़ते रहें",
+        "outcome": "survive"
+      },
+      {
+        "text": "आकाश की ओर देखें (मौत — आत्माओं के  बादलों में खींचे जाते हैं)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 29,
+    "text": "आप आकाश में उठते हैं। भंवर लौटता है। \n शा�पत चेहरों की आत्माएँ आपकी ओर बढ़ती हैं।",
+    "choices": [
+      {
+        "text": "हाथ जोड़कर शां�त का प्रस्ताव दें",
+        "outcome": "survive"
+      },
+      {
+        "text": "उन्हें पीछा छोड़ने को कहें (मौत — अनंत यातना में खींचे जाते हैं)",
+        "outcome": "death"
+      }
+    ]
+  },
+  {
+    "step": 30,
+    "text": "आप लाइब्रेरी में जागते हैं। �कताब आपके  पास बंद पड़ी है। \n एक रक्त की बूँद पृष्ठ पर है। \n आप बच गए। \n ➡ [पुनः आरंभ करें / अपनी समािप्त साझा करें] \n \n✅ Let me know if you'd like this exported as a .json, .txt, .pdf, or directly added to your \ngame code.",
+    "choices": []
   }
-  
+]
