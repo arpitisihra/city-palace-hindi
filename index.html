@@ -3,80 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>City Palace Game (Hindi)</title>
+  <title>City Palace Horror - Hindi</title>
   <style>
     body {
       background-color: black;
       color: white;
-      font-family: sans-serif;
+      font-family: 'Georgia', serif;
       padding: 2rem;
-      white-space: pre-line;
+      line-height: 1.6;
     }
-    button {
-      background-color: white;
-      color: black;
-      padding: 1rem;
-      margin: 1rem 0;
-      border: none;
-      border-radius: 0.5rem;
+    .step-text {
+      margin-bottom: 2rem;
+      font-size: 1.25rem;
+    }
+    .choices button {
+      background: none;
+      border: 2px solid white;
+      color: white;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem 0;
+      font-size: 1rem;
       cursor: pointer;
+    }
+    .choices button:hover {
+      background: white;
+      color: black;
+    }
+    #restartBtn {
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
       font-size: 1rem;
     }
   </style>
 </head>
 <body>
-  <div id="game">Loading game...</div>
+  <div class="step-text" id="stepText">कहानी लोड हो रही है...</div>
+  <div class="choices" id="choices"></div>
+  <button id="restartBtn" style="display: none;">पुनः शुरू करें</button>
 
   <script>
     let story = [];
-    let stepIndex = 0;
+    let currentStep = 1;
 
     async function loadStory() {
-      const res = await fetch("story.json");
+      const res = await fetch('story.json');
       story = await res.json();
-      renderStep();
+      showStep(currentStep);
     }
 
-    function renderStep() {
-      const game = document.getElementById("game");
-      game.innerHTML = "";
+    function showStep(stepNum) {
+      const step = story.find(s => s.step === stepNum);
+      if (!step) return;
 
-      const step = story[stepIndex];
+      document.getElementById('stepText').innerText = step.text;
+      const choicesDiv = document.getElementById('choices');
+      choicesDiv.innerHTML = '';
 
-      const text = document.createElement("p");
-      text.textContent = step.text;
-      game.appendChild(text);
-
-      if (stepIndex === story.length - 1) {
-        const restartBtn = document.createElement("button");
-        restartBtn.textContent = "🔁 फिर से शुरू करें";
-        restartBtn.onclick = () => {
-          stepIndex = 3;
-          renderStep();
-        };
-        game.appendChild(restartBtn);
-        return;
-      }
-
-      if (step.choices.length === 0) return;
-
-      step.choices.forEach((choice) => {
-        const btn = document.createElement("button");
-        btn.textContent = choice.text;
+      if (step.choices && step.choices.length > 0) {
+        step.choices.forEach(choice => {
+          const btn = document.createElement('button');
+          btn.innerText = choice.text;
+          btn.onclick = () => {
+            if (choice.outcome === 'death') {
+              document.getElementById('stepText').innerText = choice.text;
+              choicesDiv.innerHTML = '';
+              document.getElementById('restartBtn').style.display = 'inline-block';
+            } else {
+              currentStep++;
+              showStep(currentStep);
+            }
+          };
+          choicesDiv.appendChild(btn);
+        });
+      } else {
+        const btn = document.createElement('button');
+        btn.innerText = "➡ आगे बढ़ें";
         btn.onclick = () => {
-          if (choice.outcome === "death") {
-            game.innerHTML = `
-              <p>❌ आप मारे गए।</p>
-              <button onclick="stepIndex = 3; renderStep()">🔁 मुबारक महल से फिर से शुरू करें</button>
-            `;
-          } else {
-            stepIndex++;
-            renderStep();
-          }
+          currentStep++;
+          showStep(currentStep);
         };
-        game.appendChild(btn);
-      });
+        choicesDiv.appendChild(btn);
+      }
     }
+
+    document.getElementById('restartBtn').onclick = () => {
+      currentStep = 4; // restart from step 4 after death
+      document.getElementById('restartBtn').style.display = 'none';
+      showStep(currentStep);
+    };
 
     loadStory();
   </script>
