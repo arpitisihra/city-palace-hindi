@@ -1,86 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Escape City Palace</title>
+  <title>City Palace Game (Hindi)</title>
   <style>
     body {
       background-color: black;
-      color: #ffcc00;
-      font-family: 'Georgia', serif;
+      color: white;
+      font-family: sans-serif;
       padding: 2rem;
-      max-width: 600px;
-      margin: auto;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .choices {
-      margin-top: 2rem;
+      white-space: pre-line;
     }
     button {
-      background-color: #222;
-      color: #ffcc00;
-      border: 1px solid #ffcc00;
+      background-color: white;
+      color: black;
       padding: 1rem;
-      margin: 0.5rem 0;
-      width: 100%;
-      font-size: 1rem;
+      margin: 1rem 0;
+      border: none;
+      border-radius: 0.5rem;
       cursor: pointer;
+      font-size: 1rem;
     }
-    button:hover {
-      background-color: #333;
-    }
+    .hidden { display: none; }
   </style>
 </head>
 <body>
-  <h1>Escape City Palace</h1>
-  <div id="story"></div>
-  <div class="choices" id="choices"></div>
+  <div id="game"></div>
 
   <script>
-    let steps = [];
-    let currentStep = 1;
+    let story = [];
+    let stepIndex = 0;
 
-    fetch("story.json")
-      .then(response => response.json())
-      .then(data => {
-        steps = data.steps;
-        showStep(currentStep);
-      })
-      .catch(error => {
-        document.getElementById("story").innerText = "Failed to load story.";
-        console.error(error);
-      });
+    async function loadStory() {
+      const res = await fetch("story.json");
+      story = await res.json();
+      renderStep();
+    }
 
-    function showStep(stepId) {
-      const step = steps.find(s => s.id === stepId);
-      if (!step) return;
+    function renderStep() {
+      const game = document.getElementById("game");
+      game.innerHTML = "";
 
-      currentStep = stepId;
-      document.getElementById("story").innerText = step.text;
+      const step = story[stepIndex];
 
-      const choicesDiv = document.getElementById("choices");
-      choicesDiv.innerHTML = "";
+      const text = document.createElement("p");
+      text.textContent = step.text;
+      game.appendChild(text);
 
-      const shuffledChoices = [...step.choices].sort(() => Math.random() - 0.5);
+      if (stepIndex === story.length - 1) {
+        const restartBtn = document.createElement("button");
+        restartBtn.textContent = "🔁 फिर से शुरू करें";
+        restartBtn.onclick = () => {
+          stepIndex = 3;
+          renderStep();
+        };
+        game.appendChild(restartBtn);
+        return;
+      }
 
-      shuffledChoices.forEach(choice => {
-        const button = document.createElement("button");
-        button.innerText = choice.text;
-        button.onclick = () => {
-          if (choice.next_step) {
-            showStep(choice.next_step);
+      if (step.choices.length === 0) return;
+
+      step.choices.forEach((choice) => {
+        const btn = document.createElement("button");
+        btn.textContent = choice.text;
+        btn.onclick = () => {
+          if (choice.outcome === "death") {
+            game.innerHTML = `
+              <p>❌ आप मारे गए।</p>
+              <button onclick="stepIndex = 3; renderStep()">🔁 मुबारक महल से फिर से शुरू करें</button>
+            `;
           } else {
-            document.getElementById("story").innerText = choice.death || "You have died.";
-            choicesDiv.innerHTML = '<button onclick="location.reload()">Restart</button>';
+            stepIndex++;
+            renderStep();
           }
         };
-        choicesDiv.appendChild(button);
+        game.appendChild(btn);
       });
     }
+
+    loadStory();
   </script>
 </body>
 </html>
